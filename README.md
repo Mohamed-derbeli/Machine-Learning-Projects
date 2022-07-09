@@ -15,7 +15,10 @@ It is good practice to record the minimum and maximum values for each column use
 The answer would depend on situation. If you have the entire data you need for the project then normalizing before splitting should be fine. However, if you are training your model in anticipation that it should work on the data that is going to be generated in the future, then you would have to go ahead with the following steps:
 * 1. split the raw data into training and test sets
 * 2. normalize the training set and save the normalization parameters
-* 3. normalize the test set using the training normalization parameters
+* 3. built the model. 
+* 4. normalize the test set using the training normalization parameters
+* 5. test the model.
+* 6. denormalize predictions using those same parameters to return the user output in the original scale
 
 ### Which transformation to pick?
 If you decide that your data should follow a normal distribution and needs transformation, there are simple and highly utilized power transformations we will have a look at. They transform your data to follow a normal distribution more closely. 
