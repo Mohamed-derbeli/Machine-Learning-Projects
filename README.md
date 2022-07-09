@@ -13,9 +13,9 @@ It is good practice to record the minimum and maximum values for each column use
 
 ### Normalize data before or after split of training and testing data?
 The answer would depend on situation. If you have the entire data you need for the project then normalizing before splitting should be fine. However, if you are training your model in anticipation that it should work on the data that is going to be generated in the future, then you would have to go ahead with the following steps:
-* 1.) split the raw data into training and test sets
-* 2.) normalize the training set and save the normalization parameters
-* 3.) normalize the test set using the training normalization parameters
+* 1. split the raw data into training and test sets
+* 2. normalize the training set and save the normalization parameters
+* 3. normalize the test set using the training normalization parameters
 
 ### Which transformation to pick?
 If you decide that your data should follow a normal distribution and needs transformation, there are simple and highly utilized power transformations we will have a look at. They transform your data to follow a normal distribution more closely. 
