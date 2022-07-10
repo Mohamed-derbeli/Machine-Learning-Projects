@@ -40,3 +40,9 @@ There are various implementations of automatic transformations in R that choose 
 * Tukey’s Ladder of Powers. For skewed data, the implementation transformTukey()from the R package rcompanion uses Shapiro-Wilk tests iteratively to find at which lambda value the data is closest to normality and transforms it. Left skewed data should be reflected to right skew and there should be no negative values.
 * Box-Cox Transformation. The implementation BoxCox.lambda()from the R package forecast finds iteratively a lambda value which maximizes the log-likelihood of a linear model. However it can be used on a single variable with model formula x~1. The transformation with the resulting lambda value can be done via the forecast function BoxCox(). There is also an implementation in the R package MASS. Standard Box-Cox can not be used with negative values, two-parameter Box-Cox however can.
 * Yeo-Johnson Transformation. This can be seen as an useful extension to the Box-Cox. It is the same as Box-Cox for non-negative values and handles negative and 0 values as well. There are various implementations in R via packages car, VGAM and recipes in the meta machine-learning framework tidymodels.
+
+### Normality testing:
+To test the normaliy 2 methos can be used:
+* Graphs (Q-Q plot, Frequency distribution)
+* Testing P using one of the foloowing technique: Shapiro-Wilk, D'agostino-Pearson omnibus, Kolmogorov-Smirnov. if P>0.05 --> accept the Null hypothesis (normally distributed), if P <= 0.05 --> reject the Null hypothesis.
+
