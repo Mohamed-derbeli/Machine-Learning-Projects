@@ -46,3 +46,22 @@ To test the normaliy 2 methos can be used:
 * Graphs (Q-Q plot, Frequency distribution)
 * Testing P using one of the foloowing technique: Shapiro-Wilk, D'agostino-Pearson omnibus, Kolmogorov-Smirnov. if P>0.05 --> accept the Null hypothesis (normally distributed), if P <= 0.05 --> reject the Null hypothesis.
 
+
+
+
+### Save model for later use
+
+Method 1 – Pickle:
+
+Benefits:
+* The pickle module keeps track of the objects it has already serialized, so that later references to the same object won’t be serialized again, thus allowing for faster execution time.
+* Allows saving model in very little time.
+* Good For small models with fewer parameters like the one we used.
+
+Method 2 – Joblib:
+
+Benefits:
+* Ideal for the large models having many parameters and can have large NumPy arrays in the backend.
+* Can only save the file to disk and not to a string.
+* Works similar to pickle `dump` and `load`
+* Most fitted for sklearn estimators.
