@@ -17,15 +17,23 @@
      <!-- Action is where the data is sent. In our case, predict page.
      If action is omitted, it assumed to be the current page -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="percent biking" placeholder="Percent population biking" required="required" /><br>
-        <input type="text" name="percent smoking" placeholder="Percent population smoking" required="required" /><p>
+    	<input type="text" name="Angle 1" placeholder="Angle 1" required="required" /><br>
+        <input type="text" name="Angle 2" placeholder="Angle 2" required="required" /><br>
+        <input type="text" name="Angle 3" placeholder="Angle 3" required="required" /><br>
+        <input type="text" name="Angle 4" placeholder="Angle 4" required="required" /><br>
+        <input type="text" name="Angle 5" placeholder="Angle 5" required="required" /><br>
+        <input type="text" name="Angle 6" placeholder="Angle 6" required="required" /><br>
+        <input type="text" name="Angle 7" placeholder="Angle 7" required="required" /><br>
+        <input type="text" name="Angle 8" placeholder="Angle 8" required="required" /><br>
+        <input type="text" name="Angle 9" placeholder="Angle 9" required="required" /><br>
+        <input type="text" name="Angle 10" placeholder="Angle 10" required="required" /><p>
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Mine/Rock</button></p>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Prediction: Mine/Rock</button></p>
     </form>
 
    <br>
    <br>
-   <h4 style="color:Violet;">
+   <h4 style="color:Green;">
    {{ prediction_text }} </h4>
 
  </div>
