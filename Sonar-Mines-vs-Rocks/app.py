@@ -46,8 +46,13 @@ def predict():
     prediction = model.predict(features)  # features Must be in the form [[a, b]]
 
     output = round(prediction[0], 2)
+    detect=" "
+    if output>0.5:
+        detect= 'Mine'
+    else:
+        detect= "Rock"
 
-    return render_template('index.html', prediction_text='Detection is{}'.format(output))
+    return render_template('index.html', prediction_text='Detection is: {}'.format(detect))
 
 #When the Python interpreter reads a source file, it first defines a few special variables.
 #For now, we care about the __name__ variable.
